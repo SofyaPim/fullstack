@@ -158,7 +158,17 @@ summary {
 
 body {
   line-height: 1; }
-
+.frontend{
+  height: 100%;
+  background-color: rgb(185, 212, 212);
+  
+}
+.frontend h2 {
+  margin: 2rem;
+}
+.frontend img {
+  width: 90%;
+}
 blockquote,
 q {
   quotes: '' ''; }
@@ -809,7 +819,8 @@ big,
 textarea,
 label {
   line-height: 3.2rem;
-  margin-bottom: 3.2rem; }
+  margin-bottom: 3.2rem;
+  font-size: 4rem; }
 
 li,
 p:last-child {
@@ -1020,8 +1031,8 @@ h6 + h6 {
 h1 + img,
 h2 + img,
 h3 + img {
-  margin-bottom: 4.8rem;
-  margin-top: 4.8rem; }
+  margin-bottom: .8rem;
+  margin-top: .8rem; }
 
 [class*='content-'] > [class*='content-'] h2,
 [class*='content-'] > [class*='content-'] h3,
@@ -1741,16 +1752,14 @@ footer .column h3 {
   font-size: 1.8rem;
   line-height: 3.2rem; }
 
-.content-right .flexblock.features li,
-.content-left .flexblock.features li {
-  width: 46%; }
+
 
 /*====================================================================
 6.1 Features <ul class="flexblock features">
 ====================================================================== */
 .flexblock.features > li {
   border-radius: .4rem;
-  margin-bottom: 4.8rem;
+  margin-bottom: .8rem;
   width: 100%; }
 
 .flexblock.features li h2 {
@@ -1773,7 +1782,9 @@ footer .column h3 {
   margin: 0; }
 
 .flexblock.features li img {
-  width: 6.4rem; }
+  width: 40rem; 
+  align-self: center;
+}
 
 .flexblock.features li span sup {
   font-size: 3rem; }
@@ -1949,7 +1960,9 @@ About, Philosophy...
       /*padding-left: 12rem; */ }
       .flexblock.reasons li:before {
         left: 2.4rem;
-        position: absolute; } }
+        position: absolute; 
+        color: rgb(68, 221, 162)
+      } }
 
 /*=================================================
 6.7 Gallery - <ul class="flexblock gallery">
@@ -2011,6 +2024,7 @@ img size recommended:800x600px
   display: block;
   margin-left: auto;
   margin-right: auto; 
+
 height: 150px;}
 
 @media (min-width: 600px) {
@@ -3026,7 +3040,7 @@ Solution: stackoverflow.com/questions/34250282/flexbox-safari-bug-flex-wrap
     size: A4 landscape; }
   * {
     background: transparent !important;
-    color: #000 !important;
+    color: rgb(39, 36, 36) !important;
     -webkit-filter: none !important;
             filter: none !important;
     text-shadow: none !important; }
@@ -3061,8 +3075,8 @@ Solution: stackoverflow.com/questions/34250282/flexbox-safari-bug-flex-wrap
 /* -- Disable elastic scrolling/bounce:
 webslides.js will add .ws-ready automatically. Don't worry :) -- */
 body {
-  background-color: #f7f9fb;
-  color: #333; }
+  background-color: #f6f8ee;
+  color: rgb(71, 68, 68); }
 
 :focus {
   -webkit-box-shadow: 0 0 2px #96bbee;
@@ -3082,7 +3096,7 @@ a,
 .bg-white a,
 .bg-light a,
 .bg-gradient-white a {
-  color: #44d; }
+  color: rgb(68, 221, 162); }
 
 a:hover {
   color: #3af; }
@@ -3673,7 +3687,7 @@ input[type='submit'],
 .button:hover,
 button[type='submit']:hover,
 input[type='submit']:hover {
-  border: 1px solid #44d; }
+  border: 1px solid rgb(68, 221, 162); }
 
 button[type='submit'],
 input[type='submit'],
@@ -3681,9 +3695,9 @@ input[type='submit'],
 .button:hover,
 button[type='submit']:hover,
 input[type='submit']:hover {
-  background-color: #44d;
+  background-color: rgb(68, 221, 162);
   color: #fff;
-  text-shadow: 0 1px 0 #123; }
+  text-shadow: 0 1px 0 rgb(112, 124, 136); }
 
 .button:active,
 button[type='submit']:active,
