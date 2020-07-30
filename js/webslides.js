@@ -53,13 +53,13 @@
 /******/ 	};
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
+// /******/ 	__webpack_require__.n = function(module) {
+// /******/ 		var getter = module && module.__esModule ?
+// /******/ 			function getDefault() { return module['default']; } :
+// /******/ 			function getModuleExports() { return module; };
+// /******/ 		__webpack_require__.d(getter, 'a', getter);
+// /******/ 		return getter;
+// /******/ 	};
 /******/
 /******/ 	// Object.prototype.hasOwnProperty.call
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
@@ -79,7 +79,7 @@
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__custom_event__ = __webpack_require__(9);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+// function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 
 
@@ -152,30 +152,7 @@ var DOM = function () {
   }, {
     key: 'getTransitionEvent',
     value: function getTransitionEvent(optEl) {
-      if (transitionEvent && !optEl) {
-        return transitionEvent;
-      }
-
-      transitionEvent = '';
-
-      var el = optEl || document.createElement('ws');
-      var transitions = {
-        'transition': 'transitionend',
-        'OTransition': 'oTransitionEnd',
-        'MozTransition': 'transitionend',
-        'WebkitTransition': 'webkitTransitionEnd'
-      };
-      var transitionNames = Object.keys(transitions);
-
-      for (var i = 0, length = transitionNames.length; i < length && !transitionEvent; i++) {
-        var transitionName = transitionNames[i];
-
-        if (typeof el.style[transitionName] !== 'undefined') {
-          transitionEvent = transitions[transitionName];
-        }
-      }
-
-      return transitionEvent;
+      // 
     }
 
     /**
@@ -187,31 +164,7 @@ var DOM = function () {
   }, {
     key: 'getAnimationEvent',
     value: function getAnimationEvent(optEl) {
-      if (animationEvent && !optEl) {
-        return animationEvent;
-      }
-
-      animationEvent = 'animationend';
-
-      var el = optEl || document.createElement('ws');
-      var animations = {
-        'animation': 'animationend',
-        'OAnimation': 'oAnimationEnd',
-        'MozAnimation': 'animationend',
-        'WebkitAnimation': 'webkitAnimationEnd'
-      };
-      var animationNames = Object.keys(animations);
-
-      for (var i = 0, length = animationNames.length; i < length; i++) {
-        var animationName = animationNames[i];
-
-        if (typeof el.style[animationName] !== 'undefined') {
-          animationEvent = animations[animationName];
-          break;
-        }
-      }
-
-      return animationEvent;
+    
     }
 
     /**
@@ -245,9 +198,9 @@ var DOM = function () {
 
   }, {
     key: 'isVisible',
-    value: function isVisible(el) {
-      return el.offsetParent !== null;
-    }
+    value: function isVisible(el) {}
+     
+   
 
     /**
      * Fires a custom event on the given target.
@@ -290,17 +243,7 @@ var DOM = function () {
 
   }, {
     key: 'isFocusableElement',
-    value: function isFocusableElement() {
-      var result = false;
-
-      if (document.activeElement) {
-        var isContentEditable = document.activeElement.contentEditable !== 'inherit' && document.activeElement.contentEditable !== undefined;
-        var isInput = ['INPUT', 'SELECT', 'OPTION', 'TEXTAREA'].indexOf(document.activeElement.tagName) > -1;
-        result = isInput || isContentEditable;
-      }
-
-      return result;
-    }
+    value: function isFocusableElement() { }
 
     /**
      * Gets the integer value of a style property.
